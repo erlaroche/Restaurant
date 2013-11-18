@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Reservations</title>
+</head>
+<body>
+
+<script>
+  var claimedRes = new Array();
+claimedRes[0]= "Emma";
+claimedRes[1] = "Sara";
+claimedRes[2]= "Julia";
+
+
+while (true) {
+
+  var name = prompt("What is the name of your party?");
+
+  if (name === 'Exit'){
+  break;
+  }
+  
+  else if (claimedRes[0] === name || claimedRes[1] === name || claimedRes[2] ===name){
+  alert("Sorry, that name has already been taken. You must make a new reservation.");
+  } 
+  
+
+  else {
+    claimedRes.push(name);
+    alert(name + " has been added to the reservation list.");
+    console.log("claimed Res array:", claimedRes);
+  }
+}
+
+</script>
+
+</body>
+</html>
+
